@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>                     
+#include <time.h>                       
+
+int main()
+{
+    int myarray[10000];
+    int i, j, n =1000, temp;
+
+    srand((unsigned)(time(NULL)));          
+    for (i = 1; i < n; i++)                
+        myarray[i] = rand()%1000+1;                
+
+    
+    for (i = 1; i < n; i++) {
+        j = i;
+        while ((j > 0) && (myarray[j - 1] > myarray[j])) {
+            temp = myarray[j - 1];
+            myarray[j - 1] = myarray[j];
+            myarray[j] = temp;
+            j--;
+        }
+    }
+
+    
+    printf("Sorted Array\n");
+    for (i = 1; i < n; i++)
+        printf("%d\n ", myarray[i]);
+    return 0;
+}

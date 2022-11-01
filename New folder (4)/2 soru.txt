@@ -1,0 +1,25 @@
+/* Online C Compiler and Editor */
+#include <stdio.h>
+#include <math.h>
+
+    int function2() {
+        int X,toplam2,n;
+       for(X=0; X <= 100; X++) {
+        toplam2 +=X;
+        n = pow(toplam2,2);
+    }
+           return n;
+    }
+    int main() {
+       int toplam,r , sum;
+    for(int e=0; e <= 100; e++) {
+        r = pow(e,2);
+        toplam += r;
+        
+    }
+        sum = function2() - toplam  ;
+        
+        printf("%d",sum);
+
+        return 0;
+    }

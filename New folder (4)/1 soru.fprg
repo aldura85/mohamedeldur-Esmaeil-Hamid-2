@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aldora"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-30 12:39:29 PM"/>
+        <attribute name="created" value="YWxkb3JhO0RFU0tUT1AtTlQ5NjQ3VTsyMDIyLTEwLTI5OzA0OjU4OjM4IFBNOzI5NjU="/>
+        <attribute name="edited" value="YWxkb3JhO0RFU0tUT1AtTlQ5NjQ3VTsyMDIyLTEwLTMwOzEyOjM5OjI5IFBNOzM7MzA2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="True" size="1000"/>
+            <declare name="Total" type="Integer" array="False" size=""/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <declare name="Y" type="Integer" array="False" size=""/>
+            <call expression="myfunction"/>
+        </body>
+    </function>
+    <function name="myfunction" type="Integer" variable="Total">
+        <parameters/>
+        <body>
+            <declare name="Y" type="Integer" array="True" size="1000"/>
+            <declare name="Z" type="Integer" array="False" size=""/>
+            <declare name="Total" type="Integer" array="False" size=""/>
+            <assign variable="Total" expression="0"/>
+            <for variable="Z" start="1" end="999" direction="inc" step="1">
+                <if expression="Z % 5 =0">
+                    <then>
+                        <output expression="Z" newline="True"/>
+                        <assign variable="Total" expression="Total+Z"/>
+                    </then>
+                    <else>
+                        <if expression="Z % 3 =0">
+                            <then>
+                                <output expression="Z" newline="True"/>
+                                <assign variable="Total" expression="Total+Z"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Total=&quot;&amp;Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

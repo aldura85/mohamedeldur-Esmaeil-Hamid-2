@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sayak"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-29 05:31:26 PM"/>
+        <attribute name="created" value="c2F5YWs7REVTS1RPUC1OS0wxM0w0OzIwMjItMTAtMjM7MTA6MjU6MTYgYW07Mjg5Nw=="/>
+        <attribute name="edited" value="c2F5YWs7REVTS1RPUC1OS0wxM0w0OzIwMjItMTAtMjM7MTA6NDI6MzAgYW07MzszMDAy"/>
+        <attribute name="edited" value="YWxkb3JhO0RFU0tUT1AtTlQ5NjQ3VTsyMDIyLTEwLTI5OzA1OjMxOjI2IFBNOzU7MzA2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Y" type="Integer" array="True" size="101"/>
+            <declare name="Z" type="Integer" array="False" size=""/>
+            <declare name="S" type="Integer" array="False" size=""/>
+            <declare name="X" type="Integer" array="False" size=""/>
+            <assign variable="Z" expression="0"/>
+            <assign variable="S" expression="0"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <for variable="X" start="1" end="100" direction="inc" step="1">
+                <assign variable="Z" expression="Z+(X^2)"/>
+                <assign variable="S" expression="S+X"/>
+            </for>
+            <assign variable="S" expression="S^2"/>
+            <output expression="&quot;Do&#287;al say&#305;n&#305;n kerelerinin toplam&#305; =&quot;&amp;Z" newline="True"/>
+            <output expression="&quot;Do&#287;al say&#305;n&#305;n toplam&#305;n&#305;n karesi =&quot;&amp;S" newline="True"/>
+            <assign variable="sum" expression="S-Z"/>
+            <output expression="&quot;sum=&quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
